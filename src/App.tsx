@@ -21,13 +21,13 @@ function App() {
       icon: <Database color={"white"} />,
       name: "MongoDB",
       description: "Main Database",
-      level: 30,
+      level: 20,
     },
     {
       icon: <Microchip color={"white"} />,
       name: "Electronics",
       description: "Embedded Systems & Microcontrollers",
-      level: 50,
+      level: 40,
     },
     {
       icon: <Atom color={"white"} />,
