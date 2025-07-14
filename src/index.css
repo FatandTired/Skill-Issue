@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "tailwindcss-motion";
+@plugin "tailwindcss-intersect";
 
 @keyframes gradient-x {
     0%, 100% {
@@ -12,6 +14,13 @@
 
 .animate-gradient-x {
     animation: gradient-x 3s ease infinite;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 @keyframes gradient-shift {
