@@ -1,7 +1,8 @@
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Mail, MessageSquare, User } from "lucide-react";
 import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button.tsx";
 import {
   Form,
@@ -14,7 +15,6 @@ import {
 } from "@/components/ui/form.tsx";
 import { Input } from "@/components/ui/input.tsx";
 import { Textarea } from "@/components/ui/textarea.tsx";
-import { Mail, MessageSquare, User } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(1),

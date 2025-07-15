@@ -1,14 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import ObserverProvider from "@/observerProvider.tsx";
+import { RouterProvider } from "react-router-dom";
+
+import ObserverProvider from "@/components/observerProvider.tsx";
+import router from "@/router.tsx";
 
 import "./index.css";
-import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ObserverProvider>
-      <App />
+      <RouterProvider router={router} />
     </ObserverProvider>
   </StrictMode>,
 );

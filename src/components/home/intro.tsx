@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button.tsx";
 import { TypeAnimation } from "react-type-animation";
+import { Button } from "@/components/ui/button.tsx";
+import { Link } from "react-router-dom";
 
 function Intro() {
   const skills = [
@@ -74,14 +75,14 @@ function Intro() {
             "bg-primary shadow-lg shadow-primary/50 hover:scale-105 duration-200"
           }
         >
-          <a href={"#"}>See projects</a>
+          <Link to={"/projects"}>See projects</Link>
         </Button>
         <Button
           className={
             "bg-primary shadow-lg shadow-primary/50 hover:scale-105 duration-200"
           }
         >
-          <a href={"#"}>Contact!</a>
+          <Link to={"/contact"}>Contact!</Link>
         </Button>
       </div>
     </div>

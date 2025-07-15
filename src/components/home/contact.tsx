@@ -1,6 +1,6 @@
+import { Mail, MapPin } from "lucide-react";
 import ContactForm from "@/components/home/contactForm.tsx";
 import SocialMedia from "@/components/home/socialMedia.tsx";
-import { Mail, MapPin } from "lucide-react";
 
 function Contact() {
   return (

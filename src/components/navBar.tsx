@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,44 +27,79 @@ function NavBar() {
         </div>
         <div
           className={
-            "nav-links duration-200 absolute md:static md:min-h-fit min-h-[40vh] left-0 top-[-100%] w-full items-center px-5 bg-[transparent]"
+            "nav-links z-10 duration-200 absolute md:static md:min-h-fit min-h-[40vh] left-0 top-[-100%] w-full items-center px-5 bg-[transparent]"
           }
         >
           <ul className="flex md:flex-row flex-col justify-end items-center gap-[4vh] md:gap-14 p-2 md:pr-12">
-            <li
-              className={
-                "text-white hover:text-primary hover:underline duration-200"
-              }
-            >
-              <a href="#">Home</a>
+            <li>
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive ? "var(--color-primary)" : "white",
+                  textDecoration: isActive ? "underline" : "none",
+                })}
+                className={
+                  "text-white hover:text-primary! hover:underline! duration-200"
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </li>
-            <li
-              className={
-                "text-white hover:text-primary hover:underline duration-200"
-              }
-            >
-              <a href="#">About</a>
+            <li>
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive ? "var(--color-primary)" : "white",
+                  textDecoration: isActive ? "underline" : "none",
+                })}
+                className={
+                  "text-white hover:text-primary! hover:underline! duration-200"
+                }
+                to={"/about"}
+              >
+                About
+              </NavLink>
             </li>
-            <li
-              className={
-                "text-white hover:text-primary hover:underline duration-200"
-              }
-            >
-              <a href="#">Projects</a>
+            <li>
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive ? "var(--color-primary)" : "white",
+                  textDecoration: isActive ? "underline" : "none",
+                })}
+                className={
+                  "text-white hover:text-primary! hover:underline! duration-200"
+                }
+                to={"/projects"}
+              >
+                Projects
+              </NavLink>
             </li>
-            <li
-              className={
-                "text-white hover:text-primary hover:underline duration-200"
-              }
-            >
-              <a href="#">API</a>
+            <li>
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive ? "var(--color-primary)" : "white",
+                  textDecoration: isActive ? "underline" : "none",
+                })}
+                className={
+                  "text-white hover:text-primary! hover:underline! duration-200"
+                }
+                to={"/api"}
+              >
+                API
+              </NavLink>
             </li>
-            <li
-              className={
-                "text-white hover:text-primary hover:underline duration-200"
-              }
-            >
-              <a href="#">Contact</a>
+            <li>
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive ? "var(--color-primary)" : "white",
+                  textDecoration: isActive ? "underline" : "none",
+                })}
+                className={
+                  "text-white hover:text-primary! hover:underline! duration-200"
+                }
+                to={"/contact"}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
