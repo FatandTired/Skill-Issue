@@ -11,7 +11,6 @@ export class PortfolioService {
   constructor(private readonly mailerService: MailerService) {}
   async getGithubProjects(): Promise<repo[]> {
     const response: repo[] = [];
-    console.log(process.env);
     const request = await axios.get("https://api.github.com/user/repos", {
       headers: { Authorization: "Bearer " + process.env.GITHUB_TOKEN },
     });
