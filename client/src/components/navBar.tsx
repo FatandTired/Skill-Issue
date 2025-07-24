@@ -15,7 +15,7 @@ function NavBar() {
   };
   return (
     <>
-      <nav className="nav-bar flex justify-between ml-auto items-center mx-auto bg-[transparent]">
+      <nav className="nav-bar flex justify-between ml-auto items-center mx-auto bg-[transparent] md:bg-[transparent]!">
         <div className={"m-4 md:pl-5 hover:scale-105 duration-200"}>
           <a href={"/"}>
             <img
@@ -27,12 +27,13 @@ function NavBar() {
         </div>
         <div
           className={
-            "nav-links z-10 duration-200 absolute md:static md:min-h-fit min-h-[40vh] left-0 top-[-100%] w-full items-center px-5 bg-[transparent]"
+            "nav-links z-10 duration-200 absolute md:static md:min-h-fit min-h-[40vh] left-0 top-[-100%] w-full items-center px-5 bg-[transparent] md:bg-[transparent]!"
           }
         >
           <ul className="flex md:flex-row flex-col justify-end items-center gap-[4vh] md:gap-14 p-2 md:pr-12">
             <li>
               <NavLink
+                onClick={handleOpen}
                 style={({ isActive }) => ({
                   color: isActive ? "var(--color-primary)" : "white",
                   textDecoration: isActive ? "underline" : "none",
@@ -47,6 +48,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
+                onClick={handleOpen}
                 style={({ isActive }) => ({
                   color: isActive ? "var(--color-primary)" : "white",
                   textDecoration: isActive ? "underline" : "none",
@@ -61,6 +63,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
+                onClick={handleOpen}
                 style={({ isActive }) => ({
                   color: isActive ? "var(--color-primary)" : "white",
                   textDecoration: isActive ? "underline" : "none",
@@ -75,6 +78,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
+                onClick={handleOpen}
                 style={({ isActive }) => ({
                   color: isActive ? "var(--color-primary)" : "white",
                   textDecoration: isActive ? "underline" : "none",
@@ -89,6 +93,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
+                onClick={handleOpen}
                 style={({ isActive }) => ({
                   color: isActive ? "var(--color-primary)" : "white",
                   textDecoration: isActive ? "underline" : "none",
