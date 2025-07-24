@@ -1,7 +1,4 @@
 {
-  "devDependencies": {
-    "turbo": "^2.5.5"
-  },
   "packageManager": "npm@10.8.2",
   "name": "portfolio",
   "version": "1.0.0",
@@ -12,6 +9,9 @@
   ],
   "dependencies": {
     "@nestjs/config": "^4.0.2",
+    "turbo": "^2.5.5"
+  },
+  "optionalDependencies": {
     "turbo-windows-64": "^2.5.5"
   },
   "scripts": {
