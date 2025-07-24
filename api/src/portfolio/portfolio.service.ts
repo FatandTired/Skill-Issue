@@ -37,7 +37,6 @@ export class PortfolioService {
         );
         if (readme.status === 200) {
           const $ = cheerio.load(readme.data as string);
-          console.log(readme.data);
           const imageUrl =
             $("img#user-content-showcase").first().attr("src") || "";
           response.push({
