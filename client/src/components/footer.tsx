@@ -1,8 +1,7 @@
 function Footer() {
   return (
     <div className={"bg-background border-t-primary"}>
-      <hr className={"w-[90] border-gray-700"} />
-      <div className={"flex justify-between text-gray-400 p-4"}>
+      <div className={"flex justify-between text-gray-400 p-4 border-t-[1px] border-gray-700"}>
         <div className={"flex"}>
           <a href={"/"}>
             <img
