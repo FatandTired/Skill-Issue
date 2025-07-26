@@ -16,7 +16,7 @@ function NavBar() {
   return (
     <>
       <nav className="nav-bar flex justify-between ml-auto items-center mx-auto bg-[transparent] md:bg-[transparent]!">
-        <div className={"m-4 md:pl-5 hover:scale-105 duration-200"}>
+        <div className={"m-4 md:pl-5 hover:scale-105 active:scale-[99%] duration-200"}>
           <a href={"/"}>
             <img
               src={"/invertedSkill.png"}

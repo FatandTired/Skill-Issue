@@ -18,7 +18,7 @@ function NotFound() {
         </p>
         <Button
           className={
-            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 duration-200"
+            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 active:scale-[99%] duration-200"
           }
         >
           <Link to={"/"}>Go home</Link>

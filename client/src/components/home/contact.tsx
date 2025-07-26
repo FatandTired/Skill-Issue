@@ -5,7 +5,7 @@ import SocialMedia from "@/components/home/socialMedia.tsx";
 function Contact() {
   return (
     <>
-      <div className={"md:flex md:p-12"}>
+      <section className={"md:flex md:p-12"}>
         <ContactForm />
         <div
           className={
@@ -27,7 +27,7 @@ function Contact() {
             <a href={"mailto:thisfatand@urskillissue.com"}>
               <div
                 className={
-                  "bg-primary p-4 rounded-2xl flex shadow-xl shadow-background hover:scale-105 duration-300"
+                  "bg-primary p-4 rounded-2xl flex hover:scale-[101%] active:scale-[99%] duration-200"
                 }
               >
                 <div
@@ -45,7 +45,7 @@ function Contact() {
             </a>
             <div
               className={
-                "bg-primary p-4 rounded-2xl flex shadow-2xl shadow-background hover:scale-105 duration-300"
+                "bg-primary p-4 rounded-2xl flex hover:scale-[101%] duration-200"
               }
             >
               <div
@@ -60,7 +60,7 @@ function Contact() {
             </div>
             <div
               className={
-                "bg-primary p-4 rounded-2xl flex shadow-2xl shadow-background hover:scale-105 duration-300"
+                "bg-primary p-4 rounded-2xl flex hover:scale-[101%] duration-200"
               }
             >
               <div
@@ -76,7 +76,7 @@ function Contact() {
             <SocialMedia />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

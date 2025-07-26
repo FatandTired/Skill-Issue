@@ -7,7 +7,7 @@ function Stat({
 }) {
   return (
     <div
-      className={`bg-white/5 border border-primary/90 backdrop-blur-sm rounded-2xl shadow-2xs m-2 p-4 grow hover:scale-105 hover:shadow-xs hover:shadow-secondary transition-transform duration-400 ease-in-out`}
+      className={`bg-white/5 border border-primary/90 backdrop-blur-sm rounded-2xl shadow-2xs m-2 p-4 grow hover:scale-[102%] hover:shadow-xs hover:shadow-secondary transition-transform duration-400 ease-in-out`}
     >
       <div className={"flex flex-col justify-center items-center gap-2 mb-2"}>
         <h3

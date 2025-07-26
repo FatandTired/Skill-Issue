@@ -11,7 +11,7 @@ function Specialty({
 }) {
   return (
     <div
-      className={`intersect-once md:intersect:motion-translate-y-in-25 bg-background/20 border border-primary/90 backdrop-blur-sm rounded-2xl shadow-2xs m-2 p-4 flex flex-col md:max-w-[33.33%] items-center gap-4 hover:scale-105 hover:shadow-xs hover:shadow-secondary transition-transform duration-400 ease-in-out`}
+      className={`intersect-once md:intersect:motion-translate-y-in-25 bg-background/20 border border-primary/90 backdrop-blur-sm rounded-2xl shadow-2xs m-2 p-4 flex flex-col md:max-w-[33.33%] items-center gap-4 hover:scale-[103%] hover:shadow-xs hover:shadow-secondary transition-transform duration-400 ease-in-out`}
     >
       {icon}
       <h1 className={"text-white text-center text-2xl md:text-3xl font-bold"}>

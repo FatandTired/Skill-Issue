@@ -47,7 +47,7 @@ function SocialMedia() {
             <img
               loading={"lazy"}
               className={
-                "max-w-[50px] bg-primary rounded-md max-h-[100px] hover:scale-125 duration-300"
+                "max-w-[50px] bg-primary rounded-md max-h-[100px] hover:scale-[106%] active:scale-[99%] duration-300"
               }
               src={link.source}
               alt={`${link.name} social account`}

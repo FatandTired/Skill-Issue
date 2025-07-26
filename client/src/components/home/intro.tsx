@@ -9,6 +9,18 @@ function Intro() {
     "API Designer",
     "Vibe Coder",
   ];
+  
+  const handleCVDownload = () => {
+    const cvUrl = "/SpanishCV.pdf";
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "cv_spanish.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.open(cvUrl, "_blank");
+  };
+
   return (
     <div
       className={
@@ -57,7 +69,7 @@ function Intro() {
       />
       <p
         className={
-          "motion-preset-slide-up motion-delay-200 text-gray-400 text-xl md:text-xl text-justify"
+          "motion-preset-slide-up motion-delay-200 text-gray-400 text-xl md:text-xl text-justify md:max-w-[90%]"
         }
       >
         I am a passionate developer with a focus on web development and API
@@ -72,17 +84,24 @@ function Intro() {
       >
         <Button
           className={
-            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 duration-200"
+            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 active:scale-[99%] duration-200"
           }
         >
           <Link to={"/projects"}>See projects</Link>
         </Button>
         <Button
           className={
-            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 duration-200"
+            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 active:scale-[99%] duration-200"
           }
         >
-          <Link to={"/contact"}>Contact!</Link>
+          <Link to={"/contact"}>Contact</Link>
+        </Button>
+        <Button onClick={handleCVDownload}
+          className={
+            "bg-primary shadow-lg shadow-primary/50 hover:scale-105 active:scale-[99%] duration-200 cursor-pointer"
+          }
+        >
+          <span>Open CV</span>
         </Button>
       </div>
     </div>

@@ -50,7 +50,7 @@ function ContactForm() {
   }
 
   return (
-    <div
+    <section
       className={
         'intersect-once md:intersect:-motion-translate-y-in-25 md:w-[60%] bg-background border border-white/20 backdrop-blur-sm rounded-2xl shadow-2xs m-4 p-4'
       }
@@ -75,7 +75,7 @@ function ContactForm() {
                 <FormControl>
                   <Input
                     className={
-                      'text-white border-primary/70 focus-visible:border-primary focus-visible:ring-0 focus-visible:shadow-xs focus-visible:shadow-primary'
+                      'text-white border-primary/70 focus-visible:border-primary focus-visible:ring-0 focus-visible:shadow-xs focus-visible:shadow-primary placeholder:text-gray-300'
                     }
                     placeholder={'Your name'}
                     required={true}
@@ -102,7 +102,7 @@ function ContactForm() {
                   <Input
                     required={true}
                     className={
-                      'text-white border-primary/70 focus-visible:border-primary focus-visible:ring-0 focus-visible:shadow-xs focus-visible:shadow-primary'
+                      'text-white border-primary/70 focus-visible:border-primary focus-visible:ring-0 focus-visible:shadow-xs focus-visible:shadow-primary placeholder:text-gray-300'
                     }
                     placeholder="Your email address"
                     type="email"
@@ -128,11 +128,11 @@ function ContactForm() {
                   <Textarea
                     required={true}
                     placeholder="Tell me about anything you want to share"
-                    className="resize-none text-white border-primary/70 focus-visible:border-primary focus-visible:ring-0 focus-visible:shadow-xs focus-visible:shadow-primary"
+                    className="resize-none text-white border-primary/70 focus-visible:border-primary focus-visible:ring-0 focus-visible:shadow-xs focus-visible:shadow-primary placeholder:text-gray-300"
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
+                <FormDescription className='text-gray-300'>
                   I'll contact you via your email address ASAP.
                 </FormDescription>
                 <FormMessage />
@@ -142,7 +142,7 @@ function ContactForm() {
           <Button
             disabled={!form.formState.isValid || sended}
             className={
-              'w-[100%] shadow-lg hover:shadow-primary/50 hover:scale-100 duration-200 cursor-pointer'
+              'w-[100%] shadow-lg hover:shadow-primary/50 hover:scale-[101%] active:scale-[99%] duration-200 cursor-pointer'
             }
             type="submit"
           >
@@ -150,7 +150,7 @@ function ContactForm() {
           </Button>
         </form>
       </Form>
-    </div>
+    </section>
   );
 }
 

@@ -103,7 +103,7 @@ function Projects() {
               <span
                 onClick={toggleTag}
                 key={tag}
-                className={`cursor-pointer select-none px-3 py-1 m-1 text-sm text-white font-semibold hover:scale-105 duration-200 ${tags.includes(tag) ? "bg-primary" : "bg-gray-600"} rounded-full`}
+                className={`cursor-pointer select-none px-3 py-1 m-1 text-sm text-white font-semibold hover:scale-105 active:scale-[99%] duration-200 ${tags.includes(tag) ? "bg-primary" : "bg-gray-600"} rounded-full`}
               >
                 {tag}
               </span>

@@ -16,7 +16,7 @@ function Repository({
   isPrivate: boolean;
 }) {
   return (
-    <div className=" flex flex-col p-4 bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+    <div className=" flex flex-col p-4 bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-[101%] active:scale-[99%] transition-all duration-300">
       <div className="">
         <img
           src={

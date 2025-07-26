@@ -7,7 +7,7 @@ function Footer() {
             <img
               src={"/invertedSkill.png"}
               alt={"logo"}
-              className={"w-8 hover:scale-105 duration-200"}
+              className={"w-8 hover:scale-105 active:scale-[99%] duration-200"}
             />
           </a>
           <p className={"text-gray-400 text-xs md:text-2xs text-left px-2"}>

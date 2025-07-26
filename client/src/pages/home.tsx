@@ -61,11 +61,11 @@ const skills: {
 function Home() {
   return (
     <>
-      <section className={"md:flex m-12 mx-4 md:m-24 md:mx-4 justify-between"}>
+      <section className={"md:flex m-12 mx-4 md:m-24 md:mx-4 justify-center"}>
         <Intro />
         <div
           className={
-            "motion-preset-slide-up bg-primary/20 border border-primary rounded-2xl shadow-[0_0_50px] md:shadow-[0_0_35px] md:max-w-[48%] backdrop-blur-xs shadow-primary/50 p-4 mb-8 md:mb-0 md:p-8 flex gap-4 flex-wrap"
+            "justify-center motion-preset-slide-up bg-primary/20 border border-primary rounded-2xl shadow-[0_0_50px] md:shadow-[0_0_35px] md:max-w-[48%] backdrop-blur-xs shadow-primary/50 p-4 mb-8 md:mb-0 md:p-8 flex gap-4 flex-wrap"
           }
         >
           {skills.map((skill) => (

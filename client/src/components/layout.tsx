@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/sonner.tsx";
 
 function Layout() {
   return (
-    <div className={"min-h-screen"}>
+    <>
       <header>
         <NavBar />
       </header>
@@ -16,7 +16,7 @@ function Layout() {
         <Footer />
       </footer>
       <Toaster />
-    </div>
+    </>
   );
 }
 

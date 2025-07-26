@@ -21,6 +21,24 @@
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(270deg, rgba(8, 14, 36, 0.9), rgba(12, 20, 43, 0.9));
+    background-size: 400% 400%;
+    animation: gradient-shift 7s ease infinite;
+    z-index: -1;
+    pointer-events: none;
 }
 
 @keyframes gradient-shift {
