@@ -1,9 +1,11 @@
-import { Body, Controller, Get, Post, Req } from "@nestjs/common";
+import { Body, Controller, Get, Post, Req, UseGuards } from "@nestjs/common";
 import { PortfolioService } from "./portfolio.service";
 import { Request } from "express";
 import { contactForm } from "./dto/portfolio.dto";
+import { IpGuard } from "./portfolio.guard";
 
 @Controller("portfolio")
+@UseGuards(IpGuard)
 export class PortfolioController {
   constructor(private readonly portfolioService: PortfolioService) {}
 
