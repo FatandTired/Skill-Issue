@@ -9,7 +9,7 @@ export class IpGuard implements CanActivate {
     const request: Request = context.switchToHttp().getRequest();
     const ip: string | undefined =
       request.ip || request.connection.remoteAddress;
-    console.log("Request IP:", ip);
+    console.log(request.headers["x-forwarded-for"]);
     if (!ip) {
       return false;
     }
