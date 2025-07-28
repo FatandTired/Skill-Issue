@@ -1,16 +1,19 @@
 import { Injectable } from "@nestjs/common";
+import { ConfigService } from "@nestjs/config";
 import * as nodemailer from "nodemailer";
 
 @Injectable()
 export class MailerService {
+  constructor(private readonly configService: ConfigService) {}
+
   mailTransport() {
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST || "",
+      host: this.configService.get("EMAIL_HOST") || "",
       port: 587,
       secure: false,
       auth: {
-        user: process.env.EMAIL_USER || "",
-        pass: process.env.EMAIL_PASS || "",
+        user: this.configService.get("EMAIL_USER") || "",
+        pass: this.configService.get("EMAIL_PASS") || "",
       },
     });
     return transporter;

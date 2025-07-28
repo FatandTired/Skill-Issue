@@ -5,14 +5,20 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import { Request } from "express";
 import { MailerService } from "src/mailer/mailer.service";
+import { ConfigService } from "@nestjs/config";
 
 @Injectable()
 export class PortfolioService {
-  constructor(private readonly mailerService: MailerService) {}
+  constructor(
+    private readonly mailerService: MailerService,
+    private readonly configService: ConfigService,
+  ) {}
   async getGithubProjects(): Promise<repo[]> {
     const response: repo[] = [];
     const request = await axios.get("https://api.github.com/user/repos", {
-      headers: { Authorization: "Bearer " + process.env.GITHUB_TOKEN },
+      headers: {
+        Authorization: "Bearer " + this.configService.get("GITHUB_TOKEN"),
+      },
     });
 
     if (request.status === 200) {
@@ -27,11 +33,11 @@ export class PortfolioService {
         const tags = repository.topics;
         const description = repository.description;
         const readme = await axios.get(
-          `https://api.github.com/repos/${process.env.GITHUB_USERNAME}/${name}/readme`,
+          `https://api.github.com/repos/${this.configService.get("GITHUB_USERNAME")}/${name}/readme`,
           {
             headers: {
               Accept: "application/vnd.github.html+json",
-              Authorization: "Bearer " + process.env.GITHUB_TOKEN,
+              Authorization: "Bearer " + this.configService.get("GITHUB_TOKEN"),
             },
           },
         );
@@ -65,7 +71,7 @@ export class PortfolioService {
   ): Promise<{ message: string }> {
     const { name, email, message } = formData;
     await this.mailerService.sendMail(
-      process.env.CONTACT_EMAIL || "",
+      this.configService.get("CONTACT_EMAIL") || "",
       `New contact form submission: ${name}`,
       `Email: ${email}\nMessage: ${message}`,
     );
