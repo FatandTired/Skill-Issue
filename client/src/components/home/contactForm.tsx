@@ -41,7 +41,11 @@ function ContactForm() {
           toast.error('Failed to submit contact form. Please try again later.');
         }
       })
-      .catch(() => {
+      .catch((e) => {
+        if(e.response?.status === 429) {
+          toast.error('Contact form submission limit reached. Please try again later.');
+          return;
+        }
         toast.error('Failed to submit contact form. Please try again later.');
       })
       .finally(() => {
